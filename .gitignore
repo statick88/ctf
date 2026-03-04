@@ -1,0 +1,99 @@
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Virtual environments
+venv/
+env/
+env.bak/
+*.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# Challenge files (sensitive)
+*.flag
+*.key
+*.secret
+*.token
+*.password
+*.hash
+flag*
+key*
+secret*
+token*
+password*
+hash*
+challenges/*/flags/
+challenges/*/secrets/
+challenges/*/solution/
+solutions/
+writeups/
+
+# Configuration files
+.env
+.env.*
+config.local.py
+config.dev.py
+config.prod.py
+*.cfg
+*.ini
+*.toml
+*.yaml
+*.yml
+!requirements*.txt
+!*.example.env
+!*.template.env
+
+# Log files
+*.log
+logs/
+*.log.*
+access.log
+error.log
+server.log
+debug.log
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+*.dockerfile
+.containerignore
+
+# Build outputs
+build/
+dist/
+target/
+*.tar.gz
+*.zip
+*.rar
