@@ -179,6 +179,16 @@ def main():
         for alert in new_alerts:
             log_message(f"  📅 {alert['summary']}")
             log_message(f"     {alert['description']}")
+            # Send email notification
+            try:
+                from send_email_alert import send_email_alert
+
+                send_email_alert(
+                    alert["summary"],
+                    f"https://reg.rootedcon.com/payment/activity/{alert['ctf_id']}",
+                )
+            except Exception as e:
+                log_message(f"  ⚠️ Error enviando email: {e}")
     else:
         log_message("\n😔 No se encontraron CTFs gratuitos virtuales nuevos.")
         log_message("   Los CTFs gratuitos actuales son presenciales en Madrid.")

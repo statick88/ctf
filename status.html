@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estado CTF RootedCON</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .status { background: #f1f3f4; padding: 20px; border-radius: 10px; }
+        .btn { display: inline-block; padding: 10px 20px; background: #4285f4; color: white; text-decoration: none; border-radius: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Estado del Monitor de CTFs RootedCON</h1>
+    
+    <div class="status">
+        <h2>📊 Estado Actual</h2>
+        <p><strong>Última verificación:</strong> <span id="lastCheck">Cargando...</span></p>
+        <p><strong>CTFs gratuitos virtuales:</strong> No hay disponibles</p>
+        
+        <h3>📋 CTFs monitoreados:</h3>
+        <ul>
+            <li>CTF BADGES 2026 - Gratuito (presencial Madrid)</li>
+            <li>ROBOCOMBAT'26 - Gratuito (presencial Madrid)</li>
+            <li>RootedCON Hacker Night - 50€ (presencial Madrid)</li>
+        </ul>
+        
+        <h3>⚙️ Configuración:</h3>
+        <ul>
+            <li>Cronjob: Activo (cada hora)</li>
+            <li>Email: Requiere configurar App Password</li>
+            <li>Google Calendar: ✅ Creado (5 Marzo 2026, 9:00 AM)</li>
+        </ul>
+    </div>
+    
+    <h2>📧 Configurar Email</h2>
+    <p>Para recibir alertas por email, necesitas generar una App Password de Google:</p>
+    <ol>
+        <li>Ve a <a href="https://myaccount.google.com/security" target="_blank">Seguridad de Google Account</a></li>
+        <li>Activa "Verificación en 2 pasos"</li>
+        <li>Ve a "Contraseñas de aplicaciones"</li>
+        <li>Genera una nueva contraseña para "Correo"</li>
+        <li>Copia la contraseña y reemplázala en send_ctf_alert.js</li>
+    </ol>
+    
+    <a href="https://myaccount.google.com/security" class="btn" target="_blank">🔐 Configurar App Password</a>
+    <a href="https://reg.rootedcon.com/main/activities" class="btn" target="_blank">🌐 Ver actividades</a>
+    
+    <script>
+        document.getElementById('lastCheck').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>

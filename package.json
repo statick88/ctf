@@ -1,0 +1,17 @@
+{
+  "name": "ctf",
+  "version": "1.0.0",
+  "description": "This project is a collection of tools, resources, and templates for Capture The Flag (CTF) challenges and cybersecurity research.",
+  "main": "rootedcon_monitor_browser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "nodemailer": "^8.0.1",
+    "puppeteer": "^24.37.5"
+  }
+}

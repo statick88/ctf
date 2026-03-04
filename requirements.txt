@@ -1,6 +1,7 @@
 # CTF Project Requirements File
 # Created: 2026-03-03
 # Organized by category for easy maintenance
+# Note: Standard library modules are NOT listed here
 
 ################################################################################
 # OSINT Tools Dependencies (for osint-checker.py and similar tools)
@@ -18,36 +19,28 @@ fake-useragent>=1.5.1      # Generate fake user agents
 ################################################################################
 # Network & Web Exploitation
 ################################################################################
-socket                     # Standard library - no install required
 scapy>=2.5.0               # Packet manipulation library
 pwntools>=4.11.0           # CTF framework (requires libssl-dev on Linux)
 requests-toolbelt>=1.0.0   # Advanced requests features
 urllib3>=2.2.0             # URL handling library
-http.client                # Standard library - no install required
 
 ################################################################################
 # Cryptography & Encryption
 ################################################################################
 cryptography>=42.0.5       # Cryptography library
 pycryptodome>=3.20.0       # Cryptographic recipes and primitives
-hashlib                    # Standard library - no install required
-base64                     # Standard library - no install required
-binascii                   # Standard library - no install required
 pyopenssl>=24.0.0          # OpenSSL wrapper
 pyjwt>=2.8.0               # JSON Web Token implementation
 
 ################################################################################
 # Reverse Engineering & Binary Analysis
 ################################################################################
-pwntools>=4.11.0           # Also includes binary analysis features
 capstone>=5.0.1            # Disassembly framework
 keystone-engine>=0.9.2     # Assembler framework
 unicorn>=2.0.1             # CPU emulator
 pefile>=2023.2.7           # PE file parser
 pyelftools>=0.29           # ELF file parser
-idaapi                     # IDA Pro API (requires IDA Pro installation)
 angr>=9.2.77               # Binary analysis platform
-radare2>=5.8.8             # Reverse engineering framework
 r2pipe>=1.8.1              # Radare2 API wrapper
 
 ################################################################################
@@ -55,29 +48,20 @@ r2pipe>=1.8.1              # Radare2 API wrapper
 ################################################################################
 volatility3>=2.6.1         # Memory forensics framework
 pytsk3>=20231117           # Sleuth Kit bindings
-hashlib                    # Standard library - no install required
 pillow>=10.2.0             # Image processing library
 exifread>=3.0.0            # EXIF metadata extraction
 pdfminer.six>=20221105     # PDF parsing library
 olefile>=0.46              # OLE file parser
-pycryptodome>=3.20.0       # Also used for forensics
 
 ################################################################################
 # Web Application Testing
 ################################################################################
-sqlmapapi                  # SQLMap API (requires sqlmap installation)
-bs4                        # See beautifulsoup4 above
-requests>=2.31.0           # See above
-selenium>=4.17.2           # See above
-lxml>=5.1.0                # See above
 flask                      # For testing web applications locally
-django                     # For testing Django applications
 werkzeug>=2.3.0            # WSGI utility library
 
 ################################################################################
 # Programming & Scripting
 ################################################################################
-python>=3.11               # Python version requirement
 numpy>=1.26.4              # Numerical computing
 pandas>=2.2.1              # Data analysis
 matplotlib>=3.8.3          # Plotting and visualization
@@ -87,20 +71,15 @@ ipython>=8.22.2            # Enhanced Python shell
 ################################################################################
 # Utility Libraries
 ################################################################################
-argparse                   # Standard library - no install required
-sys                        # Standard library - no install required
-os                         # Standard library - no install required
-re                         # Standard library - no install required
-json                       # Standard library - no install required
-csv                        # Standard library - no install required
-logging                    # Standard library - no install required
-unittest                   # Standard library - no install required
 pytest>=8.0.0              # Testing framework
 pytest-xdist>=3.4.0        # Pytest distributed testing
 pytest-cov>=4.1.0          # Coverage reporting
-black>=24.2.0              # Code formatter
-flake8>=7.0.0              # Linting
 ruff>=0.2.2                # Fast linter and formatter
+
+################################################################################
+# Email Alerts
+################################################################################
+yagmail>=0.15.293          # Simple email sending
 
 ################################################################################
 # Specialized Tools (may require additional installation)
@@ -112,3 +91,5 @@ ruff>=0.2.2                # Fast linter and formatter
 # - wireshark: Packet analyzer (install via system package manager)
 # - john: Password cracker (install via system package manager)
 # - hydra: Login cracker (install via system package manager)
+# - radare2: Reverse engineering framework (install via system package manager)
+# - idaapi: IDA Pro API (requires IDA Pro installation)

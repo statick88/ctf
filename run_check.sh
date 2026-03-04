@@ -1,8 +1,11 @@
 #!/bin/bash
-# Check RootedCON for free virtual CTFs using Chrome
-# This script uses AppleScript to get page content from Chrome
+# Check RootedCON for free virtual CTFs
+# Runs both Python and Node.js monitors
 
 cd /Users/statick/apps/ctf
 
-# Check activities page
-/Users/statick/apps/ctf/check_ctf.sh
+echo "=== Running Python monitor ==="
+/usr/bin/python3 /Users/statick/apps/ctf/rootedcon_monitor.py
+
+echo "=== Running Browser monitor ==="
+/usr/local/bin/node /Users/statick/apps/ctf/rootedcon_monitor_browser.js
